@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Inventory & Analytics Dashboard</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Product Inventory & Analytics Dashboard</h1>
+
+        <!-- Add Product Section -->
+        <h2>Add New Product</h2>
+
+        <form id="productForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter product name"
+                required
+            >
+
+            <input
+                type="number"
+                id="price"
+                placeholder="Enter product price"
+                min="0.01"
+                step="0.01"
+                required
+            >
+
+            <button type="submit">Add Product</button>
+
+        </form>
+
+        <p id="message"></p>
+
+        <!-- Inventory Table -->
+        <h2>Inventory Roster</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+
+                <tbody id="productList">
+                    <!-- Products appear here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Financial Analytics -->
+        <h2>Financial Analytics</h2>
+
+        <h3 id="total">Total Inventory Value: $0.00</h3>
+
+        <button type="button" id="filterBtn">
+            Show Products Under $200
+        </button>
+
+        <button type="button" id="showAllBtn">
+            Show All Products
+        </button>
+
+        <!-- Affordable Products -->
+        <h3>Affordable Products (Under $200)</h3>
+
+        <ul id="affordableList">
+            <!-- Affordable products appear here -->
+        </ul>
+
+        <!-- Formatted Report -->
+        <h3>Formatted Inventory Report</h3>
+
+        <pre id="report">
+Inventory report will appear here.
+        </pre>
+
+    </div>
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
